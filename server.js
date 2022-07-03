@@ -3,16 +3,17 @@ require('dotenv').config()
 const express = require('express')
 const connectDB = require('./config/db')
 
-// Run function to connect to database
+// Envoke function to connect to database
 connectDB()
 
 // Initialize express
 const app = express()
 
 // Require routes
-app.get('/', (req, res) => {
-  res.send('INDEX PAGE')
-})
+const index = require('./routes/index')
+
+// Mount routes
+app.use('/', index)
 
 const PORT = process.env.PORT || 3000
 
