@@ -1,0 +1,16 @@
+nav {
+  background-color: #2C955B;
+}
+
+nav .nav-wrapper ul {
+  margin-right: 1rem;
+}
+
+nav .brand-logo {
+  color: #172953;
+  margin-left: 2rem;
+}
+
+nav li a {
+  color: #172953;
+}
