@@ -1,5 +1,14 @@
+:root {
+  --primary-color: #2C955B;
+  --secondary-color: #172953;
+}
+
+h1 {
+  margin-bottom: 5rem;
+}
+
 nav {
-  background-color: #2C955B;
+  background-color: var(--primary-color);
 }
 
 nav .nav-wrapper ul {
@@ -7,10 +16,15 @@ nav .nav-wrapper ul {
 }
 
 nav .brand-logo {
-  color: #172953;
+  color: var(--secondary-color);
   margin-left: 2rem;
 }
 
 nav li a {
-  color: #172953;
+  color: var(--secondary-color);
+}
+
+form .btn-large {
+  background-color: var(--primary-color);
+  color: var(--secondary-color)
 }
