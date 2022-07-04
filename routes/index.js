@@ -1,11 +1,11 @@
 const express = require('express')
 const {
-  getLanding
+  getIndex
 } = require('../controllers')
 
 const router = express.Router()
 
 router.route('/')
-  .get(getLanding)
+  .get(getIndex)
 
 module.exports = router

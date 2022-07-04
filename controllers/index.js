@@ -1,7 +1,10 @@
 const indexPage = require('../views/index')
 
 module.exports = {
-  getLanding(req, res, next) {
+  getIndex(req, res, next) {
     res.send(indexPage())
+  },
+  getPost(req, res, next) {
+    
   }
 }

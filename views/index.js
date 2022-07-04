@@ -18,17 +18,81 @@ const indexPage = () => {
         </header>
         <main class="container">
           <h1>My Business</h1>
-          <form action="/" method="POST">
-            <div class="input-field">
-              <input type="text" id="firstName" name="firstName" placeholder="Enter first name...">
-              <label for="firstName">First name</label>
+          <div class="row">
+            <div class="form-container col s12">
+              <form action="/" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input type="text" id="firstName" name="firstName">
+                    <label for="firstName">*First name</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input type="text" id="lastName" name="lastName">
+                    <label for="lastName">*Last name</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" id="phoneNumber" name="phoneNumber">
+                    <label for="phoneNumber">*Phone number</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" id="addressLineOne" name="addressLineOne">
+                    <label for="addressLineOne">*Address</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" id="addressLineTwo" name="addressLineTwo">
+                    <label for="addressLineTwo">Address Line 2</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" id="insuranceCompany" name="insuranceCompany">
+                    <label for="insuranceCompany">*Insurance company</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s4">
+                    <input type="text" id="vehicleYear" name="vehicleYear">
+                    <label for="vehicleYear">*Vehicle year</label>
+                  </div>
+                  <div class="input-field col s4">
+                    <input type="text" id="vehicleMake" name="vehicleMake">
+                    <label for="vehicleMake">*Vehicle make</label>
+                  </div>
+                  <div class="input-field col s4">
+                    <input type="text" id="vehicleModel" name="vehicleModel">
+                    <label for="vehicleModel">*Vehicle model</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input type="text" id="policyNumber" name="policyNumber">
+                    <label for="policyNumber">*Policy number</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input type="text" id="expirationDate" name="expirationDate">
+                    <label for="expirationDate">*Expiration date</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s6">
+                    <p class="label-gray">*Drivers license</p>
+                    <input type="file" name="driversLicense" accept="images/*">
+                  </div>
+                  <div class="input-field col s6">
+                    <p class="label-gray">*Policy card</p>
+                    <input type="file" name="policyCard" accept="images/*">
+                  </div>
+                </div>
+                <button type="submit" class="btn-large">Submit</button>
+              </form>
             </div>
-            <div class="input-field">
-              <input type="text" id="lastName" name="lastName" placeholder="Enter last name...">
-              <label for="lastName">Last name</label>
-            </div>
-            <button type="submit" class="btn-large">Submit</button>
-          </form>
+          </div>
         </main>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

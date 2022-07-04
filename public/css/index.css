@@ -7,6 +7,15 @@ h1 {
   margin-bottom: 5rem;
 }
 
+main form {
+  margin: 3rem;
+}
+
+.form-container {
+  border: 1px solid #9E9E9E;
+  margin-bottom: 5rem;
+}
+
 nav {
   background-color: var(--primary-color);
 }
@@ -26,5 +35,9 @@ nav li a {
 
 form .btn-large {
   background-color: var(--primary-color);
-  color: var(--secondary-color)
+  /* color: var(--secondary-color) */
+}
+
+.label-gray {
+  color: #9E9E9E;
 }
