@@ -33,6 +33,12 @@ const indexPage = () => {
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
+                    <input type="text" id="email" name="email">
+                    <label for="email">*Email address</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
                     <input type="text" id="phoneNumber" name="phoneNumber">
                     <label for="phoneNumber">*Phone number</label>
                   </div>
