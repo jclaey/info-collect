@@ -43,14 +43,24 @@ const ClientSchema = new Schema({
     type: Date
   },
   driversLicense: {
-    path: String,
-    filename: String,
-    required: true
+    path: {
+      type: String,
+      required: true
+    },
+    filename: {
+      type: String,
+      required: true
+    }
   },
   policyCard: {
-    path: String,
-    filename: String,
-    required: true
+    path: {
+      type: String,
+      required: true
+    },
+    filename: {
+      type: String,
+      required: true
+    }
   },
   submittedAt: {
     type: Date,
