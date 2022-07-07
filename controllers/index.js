@@ -1,11 +1,12 @@
 const indexPage = require('../views/index')
+const successPage = require('../views/success')
 const Client = require('../models/Client')
 
 module.exports = {
   getIndex(req, res, next) {
     res.send(indexPage())
   },
-  postIndex(req, res, next) {
+  async postIndex(req, res, next) {
     const { 
       firstName, 
       lastName,
@@ -37,10 +38,13 @@ module.exports = {
     })
 
     if (client) {
-      res.status(201).json({ message: 'Your information has been successfully submitted.' })
+      res.redirect('/success')
     } else {
       res.status(500)
       throw new Error('Server error')
     }
+  },
+  getSuccess(req, res, next) {
+    res.send(successPage())
   }
 }

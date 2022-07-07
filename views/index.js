@@ -1,3 +1,4 @@
+const axios = require('axios')
 const header = require('./partials/header')
 
 const indexPage = () => {
@@ -95,7 +96,7 @@ const indexPage = () => {
                     <input type="file" name="policyCard" accept="images/*">
                   </div>
                 </div>
-                <button type="submit" class="btn-large">Submit</button>
+                <button id="submitBtn" class="btn-large">Submit</button>
               </form>
             </div>
           </div>
