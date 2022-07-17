@@ -12,6 +12,7 @@ const app = express()
 
 // Require routes
 const index = require('./routes/index')
+const admin = require('./routes/admin/index')
 
 // Use public folder for static files
 app.use(express.static(path.join(__dirname, 'public')))
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // Mount routes
 app.use('/', index)
+app.use('/admin', admin)
 
 const PORT = process.env.PORT || 3000
 
