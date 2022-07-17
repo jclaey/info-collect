@@ -11,17 +11,17 @@ const indexPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="/css/index.css">
-        <title>My Business</title>
+        <title>Some Business</title>
       </head>
       <body>
         <header>
           ${header()}
         </header>
         <main class="container">
-          <h1>My Business</h1>
+          <h1>Some Business</h1>
           <div class="row">
             <div class="form-container col s12">
-              <form action="/" method="POST" enctype="multipart/form-data">
+              <form action="/" method="POST">
                 <div class="row">
                   <div class="input-field col s6">
                     <input type="text" id="firstName" name="firstName">
@@ -96,7 +96,7 @@ const indexPage = () => {
                     <input type="file" name="policyCard" accept="images/*">
                   </div>
                 </div>
-                <button id="submitBtn" class="btn-large">Submit</button>
+                <button type="submit" id="submitBtn" class="btn-large">Submit</button>
               </form>
             </div>
           </div>

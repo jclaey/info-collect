@@ -40,26 +40,27 @@ const ClientSchema = new Schema({
     required: true
   },
   expirationDate: {
-    type: Date
+    type: Date,
+    required: false
   },
   driversLicense: {
     path: {
       type: String,
-      required: true
+      required: false
     },
     filename: {
       type: String,
-      required: true
+      required: false
     }
   },
   policyCard: {
     path: {
       type: String,
-      required: true
+      required: false
     },
     filename: {
       type: String,
-      required: true
+      required: false
     }
   },
   submittedAt: {

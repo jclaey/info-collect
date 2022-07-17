@@ -14,11 +14,11 @@ const app = express()
 const index = require('./routes/index')
 
 // Use public folder for static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')))
 
 // Use body parser for form data
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 // Mount routes
 app.use('/', index)
