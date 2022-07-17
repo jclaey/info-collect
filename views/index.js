@@ -1,4 +1,3 @@
-const axios = require('axios')
 const header = require('./partials/header')
 
 const indexPage = () => {
