@@ -1,4 +1,3 @@
-const header = require('./partials/header')
 const layout = require('./layout')
 
 const indexPage = () => {
