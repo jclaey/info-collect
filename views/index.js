@@ -1,6 +1,6 @@
 const layout = require('./layout')
 
-const indexPage = () => {
+const indexPage = ({ errors }) => {
   return layout({ template: `
     <main class="container">
       <h1>Some Business</h1>

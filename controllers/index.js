@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator')
 const indexPage = require('../views/index')
 const successPage = require('../views/success')
 const Client = require('../models/Client')
