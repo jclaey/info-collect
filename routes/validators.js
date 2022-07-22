@@ -1,31 +1,40 @@
 const { body } = require('express-validator')
 
 module.exports = {
-  validateFirstName: body('firstName', 'Must provide a first name')
-    .trim(),
-  validateLastName: body('lastName', 'Must provide a last name')
-    .trim(),
-  validateEmail: body('email', 'Must provide a valid email')
+  validateFirstName: body('firstName', 'Please provide a first name')
+    .trim()
+    .isLength({ min: 1 }),
+  validateLastName: body('lastName', 'Please provide a last name')
+    .trim()
+    .isLength({ min: 1 }),
+  validateEmail: body('email', 'Please provide a valid email')
     .trim()
     .normalizeEmail()
     .isEmail(),
-  validatePhoneNumber: body('phoneNumber', 'Must provide a valid phone number')
+  validatePhoneNumber: body('phoneNumber', 'Please provide a phone number')
     .trim()
-    .isMobilePhone(),
-  validateAddressOne: body('addressOne', 'Must provide an address')
+    .isLength({ min: 1 })
+    .isMobilePhone()
+    .withMessage('Please provide a valid phone number'),
+  validateAddressLineOne: body('addressLineOne', 'Please provide an address')
+    .trim()
+    .isLength({ min: 1 }),
+  validateAddressLineTwo: body('addressLineTwo')
     .trim(),
-  validateAddressTwo: body('addressTwo')
-    .trim(),
-  validateInsuranceCompany: body('insuranceCompany', 'Must provide an insurance company')
-    .trim(),
-  validateVehicleYear: body('vehicleYear', 'Must provide a vehicle year')
+  validateInsuranceCompany: body('insuranceCompany', 'Please provide an insurance company')
+    .trim()
+    .isLength({ min: 1 }),
+  validateVehicleYear: body('vehicleYear', 'Please provide a vehicle year')
     .trim()
     .isLength({ min: 4, max: 4 }),
-  validateVehicleMake: body('vehicleMake', 'Must provide a vehicle make')
-    .trim(),
-  validateVehicleModel: body('vehicleModel', 'Must provide a vehicle model')
-    .trim(),
-  validatePolicyNumber: body('policyNumber', 'Must provide a policy number')
-    .trim(),
+  validateVehicleMake: body('vehicleMake', 'Please provide a vehicle make')
+    .trim()
+    .isLength({ min: 1 }),
+  validateVehicleModel: body('vehicleModel', 'Please provide a vehicle model')
+    .trim()
+    .isLength({ min: 1 }),
+  validatePolicyNumber: body('policyNumber', 'Please provide a policy number')
+    .trim()
+    .isLength({ min: 1 }),
   // validateExpirationDate: body('expirationDate')
 }

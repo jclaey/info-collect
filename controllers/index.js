@@ -5,9 +5,15 @@ const Client = require('../models/Client')
 
 module.exports = {
   getIndex(req, res, next) {
-    res.send(indexPage())
+    res.send(indexPage({}))
   },
   async postIndex(req, res, next) {
+    const errors = validationResult(req)
+
+    if (!errors.isEmpty()) {
+      return res.send(indexPage({ errors }))
+    }
+
     const { 
       firstName, 
       lastName,

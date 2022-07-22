@@ -4,44 +4,44 @@ const Schema = mongoose.Schema
 const ClientSchema = new Schema({
   firstName: {
     type: String,
-    required: true
+    required: false
   },
   lastName: {
     type: String,
-    required: true
+    required: false
   },
   email: {
     type: String,
-    required: true
+    required: false
   },
   phoneNumber: {
     type: String,
-    required: true
+    required: false
   },
   addressOne: {
     type: String,
-    required: true
+    required: false
   },
   addressTwo: String,
   insuranceCompany: {
     type: String,
-    required: true
+    required: false
   },
   vehicleYear: {
     type: String,
-    required: true
+    required: false
   },
   vehicleMake: {
     type: String,
-    required: true
+    required: false
   },
   vehicleModel: {
     type: String,
-    required: true
+    required: false
   },
   policyNumber: {
     type: String,
-    required: true
+    required: false
   },
   expirationDate: {
     type: Date,

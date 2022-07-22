@@ -9,8 +9,8 @@ const {
   validateLastName,
   validateEmail,
   validatePhoneNumber,
-  validateAddressOne,
-  validateAddressTwo,
+  validateAddressLineOne,
+  validateAddressLineTwo,
   validateInsuranceCompany,
   validateVehicleYear,
   validateVehicleMake,
@@ -22,19 +22,20 @@ const router = express.Router()
 
 router.route('/')
   .get(getIndex)
-  .post(postIndex, [
+  .post([
       validateFirstName,
       validateLastName,
       validateEmail,
       validatePhoneNumber,
-      validateAddressOne,
-      validateAddressTwo,
+      validateAddressLineOne,
+      validateAddressLineTwo,
       validateInsuranceCompany,
       validateVehicleYear,
       validateVehicleMake,
       validateVehicleModel,
       validatePolicyNumber
-    ]
+    ],
+    postIndex
   )
 
 router.route('/success')

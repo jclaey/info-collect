@@ -1,10 +1,20 @@
 const layout = require('./layout')
+const { getErrors } = require('./helpers')
 
 const indexPage = ({ errors }) => {
   return layout({ template: `
     <main class="container">
       <h1>Some Business</h1>
       <div class="row">
+        ${errors ? 
+          `
+            <div class="col s12" style="border: 1px solid #9E9E9E; margin-bottom: 2rem">
+              <div style="margin-bottom: 1rem">
+                ${getErrors(errors)}
+              </div>
+            </div>
+          `
+        : ''}
         <div class="form-container col s12">
           <form action="/" method="POST">
             <div class="row">

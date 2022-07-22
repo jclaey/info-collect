@@ -1,6 +1,7 @@
 :root {
   --primary-color: #2C955B;
   --secondary-color: #172953;
+  --border-primary-color: #9E9E9E;
 }
 
 h1 {
@@ -12,7 +13,7 @@ main form {
 }
 
 .form-container {
-  border: 1px solid #9E9E9E;
+  border: 1px solid var(--border-primary-color);
   margin-bottom: 5rem;
 }
 
