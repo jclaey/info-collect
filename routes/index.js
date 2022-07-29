@@ -34,9 +34,7 @@ router.route('/')
       validateVehicleMake,
       validateVehicleModel,
       validatePolicyNumber
-    ],
-    postIndex
-  )
+  ], postIndex)
 
 router.route('/success')
   .get(getSuccess)

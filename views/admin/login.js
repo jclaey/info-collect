@@ -1,6 +1,6 @@
 const layout = require('../layout')
 
-const loginPage = () => {
+const loginPage = ({}) => {
   return layout({ template: 
     `
       <main class="container">

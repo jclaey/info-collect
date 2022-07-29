@@ -2,11 +2,11 @@ const express = require('express')
 const router = express.Router()
 const {
   getLogin,
-  getRegister
+  postLogin
 } = require('../../controllers/admin')
 
-router.get('/login', getLogin)
-
-router.get('/register', getRegister)
+router.route('/login')
+  .get(getLogin)
+  .post(postLogin)
 
 module.exports = router

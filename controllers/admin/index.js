@@ -1,11 +1,11 @@
+const { validationResult } = require('express-validator')
 const loginPage = require('../../views/admin/login')
-const registerPage = require('../../views/admin/register')
 
 module.exports = {
   getLogin(req, res, next) {
-    res.send(loginPage())
+    res.send(loginPage({}))
   },
-  getRegister(req, res, next) {
-    res.send(registerPage())
+  postLogin(req, res, next) {
+    
   }
 }
