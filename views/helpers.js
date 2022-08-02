@@ -6,7 +6,10 @@ module.exports = {
 
     return `
       <div>
-        <h5>Errors:</h5>
+        <h5>
+          <i class="material-icons orange-text text-darken-3">warning</i>
+          Errors:
+        </h5>
         ${renderedErrors}
       </div>
     `
