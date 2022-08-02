@@ -11,7 +11,7 @@ module.exports = {
     const errors = validationResult(req)
 
     if (!errors.isEmpty()) {
-      return res.send(indexPage({ errors }))
+      return res.send(indexPage({ errors, values: req.body }))
     }
 
     const { 
