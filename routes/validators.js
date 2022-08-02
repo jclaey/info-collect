@@ -1,4 +1,5 @@
 const { body } = require('express-validator')
+const Admin = require('../models/Admin')
 
 module.exports = {
   validateFirstName: body('firstName', 'Please provide a first name')
@@ -37,4 +38,31 @@ module.exports = {
     .trim()
     .isLength({ min: 1 }),
   // validateExpirationDate: body('expirationDate')
+  requireEmailExists: body('email')
+    .trim()
+    .normalizeEmail()
+    .isEmail()
+    .withMessage('Must provide a valid email')
+    .custom(async email => {
+      const admin = await Admin.findOne({ email })
+
+      if (!admin) {
+        throw new Error('Invalid credentials')
+      }
+    }),
+  requireValidPasswordForUser: body('password')
+    .trim()
+    .custom(async (password, { req }) => {
+      const admin = await Admin.findOne({ email: req.body.email })
+
+      if (!admin) {
+        throw new Error('Invalid credentials')
+      }
+
+      const validPassword = admin.comparePasswords(password)
+
+      if (!validPassword) {
+        throw new Error('Invalid credentials')
+      }
+    })
 }
