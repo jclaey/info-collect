@@ -1,7 +1,8 @@
 // Require packages for this file
 require('dotenv').config()
-const express = require('express')
 const path = require('path')
+const express = require('express')
+const cookieSession = require('cookie-session')
 const connectDB = require('./config/db')
 
 // Envoke function to connect to database
@@ -20,6 +21,13 @@ app.use(express.static(path.join(__dirname, 'public')))
 // Use body parser for form data
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
+// Use cookie session and set keys
+app.use(cookieSession({
+  keys: ['lklekaiudbfip32n48dpa3pihirgldnagf3qp3r09ieemviej'],
+  secure: process.env.NODE_ENV === 'production' ? true : false,
+  httpOnly: true
+}))
 
 // Mount routes
 app.use('/', index)

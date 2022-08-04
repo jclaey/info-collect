@@ -1,5 +1,7 @@
 {
   "name": "dent_mavs_landing",
+  "proxy": "http://127.0.0.1:3000",
+  "secure": false,
   "version": "1.0.0",
   "description": "Landing page for accepting user data",
   "main": "server.js",

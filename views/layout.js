@@ -1,6 +1,6 @@
 const header = require('./partials/header')
 
-const layout = ({ template }) => {
+const layout = ({ template }, req) => {
   return `
     <!DOCTYPE html>
       <html>
@@ -15,7 +15,7 @@ const layout = ({ template }) => {
         </head>
         <body>
           <header>
-            ${header()}
+            ${header(req)}
           </header>
           ${template}
           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

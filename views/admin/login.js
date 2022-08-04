@@ -1,7 +1,7 @@
 const layout = require('../layout')
-const getErrors = require('../helpers')
+const { getErrors } = require('../helpers')
 
-const loginPage = ({ errors }) => {
+const loginPage = ({ errors }, req) => {
   return layout({ template: 
     `
       <main class="container">
@@ -17,7 +17,7 @@ const loginPage = ({ errors }) => {
             ` 
           : ''}
           <div class="form-container col s12">
-            <form action="/admin/dashboard" method="POST">
+            <form action="/admin/login" method="POST">
               <div class="row">
                 <div class="input-field col s12">
                   <input name="email" id="email" type="email" class="validate">
@@ -36,7 +36,7 @@ const loginPage = ({ errors }) => {
         </div>
       </main>
     `
-  })
+  }, req)
 }
 
 module.exports = loginPage
