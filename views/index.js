@@ -77,18 +77,8 @@ const indexPage = ({ errors, values = {} }) => {
                 <label for="policyNumber">*Policy number</label>
               </div>
               <div class="input-field col s6">
-                <input type="text" id="expirationDate" name="expirationDate" class="datepicker">
+                <input type="text" id="expirationDate" name="expirationDate" class="datepicker" value="${errors && values.expirationDate && values.expirationDate !== '' ? values.expirationDate : ''}">
                 <label for="expirationDate">*Expiration date</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s6">
-                <p class="label-gray">*Drivers license</p>
-                <input type="file" name="driversLicense" accept="images/*">
-              </div>
-              <div class="input-field col s6">
-                <p class="label-gray">*Policy card</p>
-                <input type="file" name="policyCard" accept="images/*">
               </div>
             </div>
             <button type="submit" id="submitBtn" class="btn-large">Submit</button>
