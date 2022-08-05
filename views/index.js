@@ -77,7 +77,7 @@ const indexPage = ({ errors, values = {} }) => {
                 <label for="policyNumber">*Policy number</label>
               </div>
               <div class="input-field col s6">
-                <input type="text" id="expirationDate" name="expirationDate">
+                <input type="text" id="expirationDate" name="expirationDate" class="datepicker">
                 <label for="expirationDate">*Expiration date</label>
               </div>
             </div>
@@ -96,6 +96,8 @@ const indexPage = ({ errors, values = {} }) => {
         </div>
       </div>
     </main>
+
+    <script src="/javascript/date-picker.js"></script>
   ` })
 }
 

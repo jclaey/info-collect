@@ -1,6 +1,7 @@
 const { validationResult } = require('express-validator')
 const indexPage = require('../views/index')
 const successPage = require('../views/success')
+const failurePage = require('../views/failure')
 const Client = require('../models/Client')
 
 module.exports = {
@@ -47,11 +48,18 @@ module.exports = {
     if (client) {
       res.redirect('/success')
     } else {
-      res.status(500)
-      throw new Error('Server error')
+      if (process.env.NODE_ENV === 'development') {
+        res.status(500)
+        throw new Error('Server error')
+      } else {
+        res.redirect('/failure')
+      }
     }
   },
   getSuccess(req, res, next) {
     res.send(successPage())
+  },
+  getFailure(req, res, next) {
+    res.send(failurePage())
   }
 }
