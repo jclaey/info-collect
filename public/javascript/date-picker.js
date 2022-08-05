@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const elems = document.querySelectorAll('.datepicker');
   const instances = M.Datepicker.init(elems, {
     autoClose: true,
-    minDate: now
+    minDate: now,
+    format: 'mm/dd/yyyy'
   });
 });
