@@ -47,26 +47,6 @@ const ClientSchema = new Schema({
     type: Date,
     required: false
   },
-  driversLicense: {
-    path: {
-      type: String,
-      required: false
-    },
-    filename: {
-      type: String,
-      required: false
-    }
-  },
-  policyCard: {
-    path: {
-      type: String,
-      required: false
-    },
-    filename: {
-      type: String,
-      required: false
-    }
-  },
   submittedAt: {
     type: Date,
     default: Date.now
