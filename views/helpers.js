@@ -10,7 +10,7 @@ module.exports = {
       <div>
         <h5>
           <i class="material-icons orange-text text-darken-3">warning</i>
-          Errors:
+          Error!
         </h5>
         ${renderedErrors()}
       </div>

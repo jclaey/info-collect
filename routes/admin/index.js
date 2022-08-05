@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const asyncHandler = require('../../middleware/async')
+const { requireAuth } = require('../../middleware/auth')
 const {
   requireEmailExists,
   requireValidPasswordForUser
@@ -21,6 +22,6 @@ router.route('/login')
 
 router.get('/logout', getLogout)
 
-router.get('/dashboard', asyncHandler(getClients))
+router.get('/dashboard', requireAuth, asyncHandler(getClients))
 
 module.exports = router
