@@ -15,7 +15,8 @@ const {
   validateVehicleYear,
   validateVehicleMake,
   validateVehicleModel,
-  validatePolicyNumber
+  validatePolicyNumber,
+  validateExpirationDate
 } = require('./validators')
 
 const router = express.Router()
@@ -33,7 +34,8 @@ router.route('/')
       validateVehicleYear,
       validateVehicleMake,
       validateVehicleModel,
-      validatePolicyNumber
+      validatePolicyNumber,
+      validateExpirationDate
   ], postIndex)
 
 router.route('/success')

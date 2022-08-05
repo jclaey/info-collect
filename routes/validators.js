@@ -12,9 +12,10 @@ module.exports = {
     .trim()
     .normalizeEmail()
     .isEmail(),
-  validatePhoneNumber: body('phoneNumber', 'Please provide a phone number')
+  validatePhoneNumber: body('phoneNumber')
     .trim()
     .isLength({ min: 1 })
+    .withMessage('Please provide a phone number')
     .isMobilePhone()
     .withMessage('Please provide a valid phone number'),
   validateAddressLineOne: body('addressLineOne', 'Please provide an address')
@@ -37,7 +38,9 @@ module.exports = {
   validatePolicyNumber: body('policyNumber', 'Please provide a policy number')
     .trim()
     .isLength({ min: 1 }),
-  // validateExpirationDate: body('expirationDate')
+  validateExpirationDate: body('expirationDate', 'Please provide an expiration date')
+    .trim()
+    .isDate({ format: 'MM/DD/YYYY' }),
   requireEmailExists: body('email')
     .trim()
     .normalizeEmail()
