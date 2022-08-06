@@ -15,35 +15,7 @@ module.exports = {
       return res.send(indexPage({ errors, values: req.body }))
     }
 
-    const { 
-      firstName, 
-      lastName,
-      email,
-      phoneNumber, 
-      addressLineOne, 
-      addressLineTwo,
-      insuranceCompany,
-      vehicleYear,
-      vehicleMake,
-      vehicleModel,
-      policyNumber,
-      expirationDate
-    } = req.body
-
-    const client = await Client.create({
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      addressLineOne,
-      addressLineTwo,
-      insuranceCompany,
-      vehicleYear,
-      vehicleMake,
-      vehicleModel,
-      policyNumber,
-      expirationDate
-    })
+    const client = await Client.create(req.body)
 
     if (client) {
       res.redirect('/success')
