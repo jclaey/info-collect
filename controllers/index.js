@@ -3,6 +3,7 @@ const indexPage = require('../views/index')
 const successPage = require('../views/success')
 const failurePage = require('../views/failure')
 const Client = require('../models/Client')
+const sendEmail = require('../utils/sendEmail')
 
 module.exports = {
   getIndex(req, res, next) {
@@ -18,6 +19,7 @@ module.exports = {
     const client = await Client.create(req.body)
 
     if (client) {
+      await sendEmail({ firstName: client.firstName, lastName: client.lastName })
       res.redirect('/success')
     } else {
       if (process.env.NODE_ENV === 'development') {

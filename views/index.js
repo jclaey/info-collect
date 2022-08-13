@@ -41,13 +41,13 @@ const indexPage = ({ errors, values = {} }) => {
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input type="text" id="addressLineOne" name="addressLineOne" value="${errors && values.addressLineOne && values.addressLineOne !== '' ? values.addressLineOne : ''}">
+                <input type="text" id="addressLineOne" name="addressOne" value="${errors && values.addressLineOne && values.addressLineOne !== '' ? values.addressLineOne : ''}">
                 <label for="addressLineOne">*Address</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input type="text" id="addressLineTwo" name="addressLineTwo" value="${errors && values.addressLineTwo && values.addressLineTwo !== '' ? values.addressLineTwo : ''}">
+                <input type="text" id="addressLineTwo" name="addressTwo" value="${errors && values.addressLineTwo && values.addressLineTwo !== '' ? values.addressLineTwo : ''}">
                 <label for="addressLineTwo">Address Line 2</label>
               </div>
             </div>

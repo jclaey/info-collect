@@ -12,6 +12,7 @@
   "author": "Jason Claeys",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "cookie-session": "^2.0.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",

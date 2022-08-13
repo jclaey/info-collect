@@ -18,10 +18,10 @@ module.exports = {
     .withMessage('Please provide a phone number')
     .isMobilePhone()
     .withMessage('Please provide a valid phone number'),
-  validateAddressLineOne: body('addressLineOne', 'Please provide an address')
+  validateAddressOne: body('addressOne', 'Please provide an address')
     .trim()
     .isLength({ min: 1 }),
-  validateAddressLineTwo: body('addressLineTwo')
+  validateAddressTwo: body('addressTwo')
     .trim(),
   validateInsuranceCompany: body('insuranceCompany', 'Please provide an insurance company')
     .trim()
