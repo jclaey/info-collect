@@ -1,5 +1,6 @@
 const { validationResult } = require('express-validator')
 const indexPage = require('../views/index')
+const claimFormPage = require('../views/claimForm')
 const successPage = require('../views/success')
 const failurePage = require('../views/failure')
 const Client = require('../models/Client')
@@ -9,11 +10,14 @@ module.exports = {
   getIndex(req, res, next) {
     res.send(indexPage({}))
   },
-  async postIndex(req, res, next) {
+  getClaimForm(req, res, next) {
+    res.send(claimFormPage({}))
+  },
+  async postClaimForm(req, res, next) {
     const errors = validationResult(req)
 
     if (!errors.isEmpty()) {
-      return res.send(indexPage({ errors, values: req.body }))
+      return res.send(claimFormPage({ errors, values: req.body }))
     }
 
     const client = await Client.create(req.body)
