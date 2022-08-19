@@ -7,8 +7,8 @@ const failurePage = () => {
         <div class="row">
           <div class="col s12">
             <div class="card">
-              <div class="card-content green-text">
-                <span class="card-title">Success!</span>
+              <div class="card-content red-text">
+                <span class="card-title">Error!</span>
                 <p>Something went wrong. Please try again later.</p>
               </div>
               <div class="card-action">

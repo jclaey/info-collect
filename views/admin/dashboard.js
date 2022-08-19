@@ -4,7 +4,7 @@ const adminDashboardPage = ({ clients }, req) => {
   const renderedClients = () => {
     return clients.map(client => {
       return `
-        <div class="card blue-grey darken-1">
+        <div class="card client-card">
           <div class="card-content white-text">
             <span class="card-title">${client.firstName} ${client.lastName}</span>
             <p>Email: ${client.email}</p>
