@@ -1,4 +1,5 @@
 const express = require('express')
+const asyncHandler = require('../middleware/async')
 const {
   getIndex,
   getClaimForm,
@@ -41,7 +42,7 @@ router.route('/claim-form')
     validateVehicleModel,
     validatePolicyNumber,
     validateExpirationDate
-  ], postClaimForm)
+  ], asyncHandler(postClaimForm))
 
   router.route('/success')
     .get(getSuccess)

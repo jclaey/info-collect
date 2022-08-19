@@ -18,7 +18,7 @@ router.route('/login')
   .post([
     requireEmailExists,
     requireValidPasswordForUser
-  ], postLogin)
+  ], asyncHandler(postLogin))
 
 router.get('/logout', getLogout)
 
