@@ -56,6 +56,10 @@ form .btn-large {
 }
 
 /* CLIENT CARD */
+#success-main {
+  min-height: 600px;
+}
+
 #success-main .card {
   margin-top: 10rem;
 }
@@ -71,6 +75,10 @@ form .btn-large {
 
 #success-main .card-action a {
   color: var(--secondary-color)
+}
+
+.client-card {
+  background-color: var(--secondary-color);
 }
 
 /* INDEX PAGE CARDS */
@@ -110,12 +118,12 @@ form .btn-large {
   font-size: 20px;
 }
 
-/* FEATURES */
+/* INDEX FEATURES AREA */
 #features {
   background-color: #f4f4f4;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .row {
