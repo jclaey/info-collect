@@ -30,13 +30,11 @@ const claimFormPage = ({ errors, values = {} }) => {
               </div>
             </div>
             <div class="row">
-              <div class="input-field col s12">
+              <div class="input-field col s6">
                 <input type="text" id="email" name="email" value="${errors && values.email && values.email !== '' ? values.email : ''}">
                 <label for="email">*Email address</label>
               </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
+              <div class="input-field col s6">
                 <input type="text" id="phoneNumber" name="phoneNumber" value="${errors && values.phoneNumber && values.phoneNumber !== '' ? values.phoneNumber : ''}">
                 <label for="phoneNumber">*Phone number</label>
               </div>
@@ -80,7 +78,7 @@ const claimFormPage = ({ errors, values = {} }) => {
               </div>
               <div class="input-field col s6">
                 <input type="text" id="expirationDate" name="expirationDate" class="datepicker" value="${errors && values.expirationDate && values.expirationDate !== '' ? values.expirationDate : ''}">
-                <label for="expirationDate">*Expiration date</label>
+                <label for="expirationDate">*Expiration date (MM/DD/YY)</label>
               </div>
             </div>
             <div id="form-required-text" class="right">
