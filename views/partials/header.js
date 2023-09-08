@@ -2,7 +2,7 @@ const header = (req = null) => {
   return `
     <nav>
       <div class="nav-wrapper">
-        <a href="/" class="brand-logo">V. Raju</a>
+        <a href="/" class="brand-logo">Hail Repair</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="/claim-form">File A Claim</a></li>
